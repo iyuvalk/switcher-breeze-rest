@@ -4,7 +4,7 @@ After=network.target
 [Service]
 #User=automaton
 ExecStartPre=docker rm -f switcher-breeze-rest-api
-ExecStart=docker run --rm --name switcher-breeze-rest-api --net host -v /etc/hosts:/etc/hosts artifexil/switcher-rest-api /app/switcher-rest-api.py --port 8084
+ExecStart=docker run --rm --name switcher-breeze-rest-api --net host -v /etc/hosts:/etc/hosts artifexil/switcher-rest-api /app/switcher-rest-api.py --port 8087
 ExecStop=docker stop switcher-breeze-rest-api
 Restart=always
 PermissionsStartOnly=true
